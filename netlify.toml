@@ -2,8 +2,8 @@
 # Cantinho da Luci - Landing Page
 
 [build]
-  # Comando para fazer o build do projeto Next.js
-  command = "npm install && npm run build"
+  # Comando para fazer o build do projeto Next.js com --legacy-peer-deps
+  command = "npm install --legacy-peer-deps && npm run build"
 
   # Diretório de publicação (.next para Next.js com SSR/SSG)
   publish = ".next"
@@ -17,7 +17,6 @@
 
   # Variáveis de ambiente para otimização
   NEXT_TELEMETRY_DISABLED = "1"
-  NPM_FLAGS = "--legacy-peer-deps"
 
 # Plugin do Next.js para Netlify (habilita SSR, ISR, API Routes)
 [[plugins]]
@@ -77,13 +76,13 @@
 
 # Context-specific builds (deploy previews)
 [context.production]
-  command = "npm install && npm run build"
+  command = "npm install --legacy-peer-deps && npm run build"
 
 [context.deploy-preview]
-  command = "npm install && npm run build"
+  command = "npm install --legacy-peer-deps && npm run build"
 
 [context.branch-deploy]
-  command = "npm install && npm run build"
+  command = "npm install --legacy-peer-deps && npm run build"
 
 # Configurações adicionais de deploy
 [dev]
