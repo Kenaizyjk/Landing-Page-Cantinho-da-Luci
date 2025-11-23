@@ -5,7 +5,9 @@
 [build.environment]
   NODE_VERSION = "20"
   NEXT_TELEMETRY_DISABLED = "1"
-  NPM_FLAGS = "--version"
+  # Force pnpm as package manager
+  NPM_VERSION = "pnpm"
+  PNPM_VERSION = "9.15.1"
 
 [[headers]]
   for = "/*"
