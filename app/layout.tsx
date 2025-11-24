@@ -2,7 +2,6 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
-import { FloatingChatbot } from "@/components/floating-chatbot"
 import "./globals.css"
 
 const geistSans = Geist({
@@ -35,7 +34,6 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} font-sans antialiased`}>
         {children}
-        <FloatingChatbot />
         <Analytics />
       </body>
     </html>
