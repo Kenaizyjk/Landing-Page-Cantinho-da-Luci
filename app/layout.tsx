@@ -1,12 +1,18 @@
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 export const metadata: Metadata = {
   title: "Cantinho da Luci | Restaurante & Pousada",
   description: "Um refúgio verde com o melhor da comida mineira e hospedagem aconchegante.",
-    generator: 'v0.app'
+  generator: 'v0.app'
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
 }
 
 export default function RootLayout({
