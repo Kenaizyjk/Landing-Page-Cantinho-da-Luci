@@ -2,7 +2,23 @@
 
 Este guia mostrará como configurar a API do chatbot flutuante no site.
 
-## 📋 Passo a Passo
+## ⚡ Início Rápido (Modo de Desenvolvimento)
+
+**Boas notícias!** O chatbot já está funcionando em modo de desenvolvimento! 🎉
+
+Você **NÃO precisa** configurar nenhuma API para testar. O chatbot usa respostas simuladas inteligentes que respondem perguntas sobre:
+- Horários de funcionamento
+- Reservas
+- Cardápio
+- Preços
+- Localização
+- Piscina e hospedagem
+
+**Para usar em produção com IA real**, siga os passos abaixo para configurar uma API.
+
+---
+
+## 📋 Passo a Passo (Produção)
 
 ### 1. Escolher o Provedor de IA
 
@@ -46,33 +62,38 @@ O chatbot suporta 3 provedores diferentes. Escolha um:
 
 ### 2. Configurar as Variáveis de Ambiente
 
-1. **Copie o arquivo de exemplo:**
-   ```bash
-   cp .env.example .env
-   ```
+O arquivo `.env` já existe com o modo de desenvolvimento ativado:
+```env
+CHATBOT_PROVIDER=mock
+```
 
-2. **Edite o arquivo `.env` e adicione suas credenciais:**
+Para usar uma IA real em produção, edite o arquivo `.env`:
 
-   **Para OpenAI (Recomendado):**
-   ```env
-   CHATBOT_PROVIDER=openai
-   OPENAI_API_KEY=sk-sua_chave_aqui
-   CHATBOT_MODEL=gpt-4o-mini
-   ```
+**Para OpenAI (Recomendado):**
+```env
+CHATBOT_PROVIDER=openai
+OPENAI_API_KEY=sk-sua_chave_aqui
+CHATBOT_MODEL=gpt-4o-mini
+```
 
-   **Para Anthropic (Claude):**
-   ```env
-   CHATBOT_PROVIDER=anthropic
-   ANTHROPIC_API_KEY=sua_chave_aqui
-   CHATBOT_MODEL=claude-3-5-sonnet-20241022
-   ```
+**Para Anthropic (Claude):**
+```env
+CHATBOT_PROVIDER=anthropic
+ANTHROPIC_API_KEY=sua_chave_aqui
+CHATBOT_MODEL=claude-3-5-sonnet-20241022
+```
 
-   **Para Google AI (Gemini):**
-   ```env
-   CHATBOT_PROVIDER=google
-   GOOGLE_AI_API_KEY=sua_chave_aqui
-   CHATBOT_MODEL=gemini-1.5-flash
-   ```
+**Para Google AI (Gemini):**
+```env
+CHATBOT_PROVIDER=google
+GOOGLE_AI_API_KEY=sua_chave_aqui
+CHATBOT_MODEL=gemini-1.5-flash
+```
+
+**Para voltar ao modo de desenvolvimento:**
+```env
+CHATBOT_PROVIDER=mock
+```
 
 ---
 
