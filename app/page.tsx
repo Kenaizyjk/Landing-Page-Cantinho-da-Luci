@@ -6,9 +6,9 @@ import { MapPin, Phone, Instagram, Star, Clock, Wifi, Coffee } from "lucide-reac
 
 export default function LandingPage() {
   return (
-    <div className="flex flex-col min-h-screen font-sans text-stone-800 bg-stone-50">
+    <div className="flex flex-col font-sans text-stone-800 bg-stone-50">
       {/* Hero Section */}
-      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/entrada-cantinho.jpeg"
@@ -48,11 +48,11 @@ export default function LandingPage() {
       </section>
 
       {/* Fogão a Lenha - Destaque Gastronômico */}
-      <section id="menu" className="py-24 bg-stone-900 text-stone-100 relative overflow-hidden">
+      <section id="menu" className="min-h-screen flex items-center py-16 md:py-24 bg-stone-900 text-stone-100 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 pointer-events-none">
-          <Image src="/wood-texture-dark.jpg" alt="Textura de madeira" fill className="object-cover" />
+          <Image src="/wood-texture-dark.jpg" alt="Textura de madeira" fill className="object-cover" loading="eager" />
         </div>
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 relative z-10 w-full">
           <div className="text-center mb-16 space-y-4">
             <span className="uppercase tracking-widest text-sm font-semibold text-[#D4AF37]">Sabor Inconfundível</span>
             <h2 className="text-4xl md:text-6xl font-serif font-bold text-stone-5">O Fogão a Lenha</h2>
@@ -69,6 +69,8 @@ export default function LandingPage() {
                 alt="Buffet no fogão a lenha"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700"
+                loading="eager"
+                quality={90}
               />
             </div>
             <div className="order-1 lg:order-2 space-y-8">
@@ -107,8 +109,8 @@ export default function LandingPage() {
       </section>
 
       {/* Acomodações e Piscina */}
-      <section id="hospedagem" className="py-24 bg-stone-50">
-        <div className="container mx-auto px-4">
+      <section id="hospedagem" className="min-h-screen flex items-center py-16 md:py-24 bg-stone-50">
+        <div className="container mx-auto px-4 w-full">
           <div className="text-center mb-16">
             <span className="uppercase tracking-widest text-sm font-semibold text-stone-500">Descanso e Lazer</span>
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-stone-900 mt-2 mb-6">
@@ -123,7 +125,7 @@ export default function LandingPage() {
             {/* Piscina Feature */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="relative h-[400px] lg:h-[500px] rounded-sm overflow-hidden shadow-xl">
-                <Image src="/piscina.jpeg" alt="Piscina ao ar livre" fill className="object-cover" />
+                <Image src="/piscina.jpeg" alt="Piscina ao ar livre" fill className="object-cover" quality={85} />
               </div>
               <div className="space-y-6 lg:pl-10">
                 <h3 className="text-3xl font-serif font-bold text-stone-800">Piscina e Natureza</h3>
@@ -174,10 +176,10 @@ export default function LandingPage() {
               </div>
               <div className="order-1 lg:order-2 grid grid-cols-2 gap-4">
                 <div className="relative h-[300px] rounded-sm overflow-hidden shadow-lg mt-8">
-                  <Image src="/quarto-casal.jpeg" alt="Quarto de Casal" fill className="object-cover" />
+                  <Image src="/quarto-casal.jpeg" alt="Quarto de Casal" fill className="object-cover" quality={85} />
                 </div>
                 <div className="relative h-[300px] rounded-sm overflow-hidden shadow-lg mb-8">
-                  <Image src="/quarto-familia.jpeg" alt="Quarto Família" fill className="object-cover" />
+                  <Image src="/quarto-familia.jpeg" alt="Quarto Família" fill className="object-cover" quality={85} />
                 </div>
               </div>
             </div>
@@ -186,8 +188,8 @@ export default function LandingPage() {
       </section>
 
       {/* Depoimentos */}
-      <section className="py-24 bg-stone-100 border-t border-stone-200">
-        <div className="container mx-auto px-4">
+      <section className="min-h-screen flex items-center py-16 md:py-24 bg-stone-100 border-t border-stone-200">
+        <div className="container mx-auto px-4 w-full">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900">O que dizem nossos hóspedes</h2>
           </div>
@@ -229,8 +231,8 @@ export default function LandingPage() {
       </section>
 
       {/* Localização e Contato */}
-      <section id="contato" className="py-24 bg-stone-900 text-white">
-        <div className="container mx-auto px-4">
+      <section id="contato" className="min-h-screen flex items-center py-16 md:py-24 bg-stone-900 text-white">
+        <div className="container mx-auto px-4 w-full">
           <div className="grid lg:grid-cols-2 gap-16">
             <div className="space-y-8">
               <h2 className="text-4xl font-serif font-bold text-white mb-8">Venha nos visitar</h2>
