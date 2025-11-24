@@ -4,6 +4,11 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  /* Fonts */
+  --font-sans: 'Geist', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, monospace;
+  --font-serif: 'Playfair Display', ui-serif, Georgia, serif;
+
   /* Warm Premium Cream Background */
   --background: oklch(0.98 0.01 85);
   /* Deep Charcoal Text */
