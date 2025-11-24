@@ -296,7 +296,7 @@ export default function LandingPage() {
                   size="lg"
                   className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold text-lg h-14"
                 >
-                  <Link href="https://instagram.com/cantinhodoluci" target="_blank" rel="noopener noreferrer">
+                  <Link href="https://instagram.com/cantinhodaluci1" target="_blank" rel="noopener noreferrer">
                     <Instagram className="mr-2 w-5 h-5" />
                     Veja nosso Instagram
                   </Link>
@@ -313,7 +313,6 @@ export default function LandingPage() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="grayscale hover:grayscale-0 transition-all duration-500"
               ></iframe>
             </div>
           </div>
