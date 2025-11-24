@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { MapPin, Phone, Instagram, Star, Clock, Wifi, Coffee } from "lucide-react"
+import { MapPin, Phone, Instagram, Star, Clock, Wifi, Coffee, MessageCircle } from "lucide-react"
 
 export default function LandingPage() {
   return (
@@ -280,15 +280,25 @@ export default function LandingPage() {
                 </div>
               </div>
 
-              <div className="pt-8">
+              <div className="pt-8 flex flex-col sm:flex-row gap-4">
                 <Button
                   asChild
                   size="lg"
                   className="w-full sm:w-auto bg-[#25D366] hover:bg-[#128C7E] text-white font-bold text-lg h-14"
                 >
                   <Link href="https://wa.me/5531996481646" target="_blank">
-                    <Instagram className="mr-2 w-5 h-5" />
+                    <MessageCircle className="mr-2 w-5 h-5" />
                     Chamar no WhatsApp
+                  </Link>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold text-lg h-14"
+                >
+                  <Link href="https://instagram.com/cantinhodoluci" target="_blank" rel="noopener noreferrer">
+                    <Instagram className="mr-2 w-5 h-5" />
+                    Veja nosso Instagram
                   </Link>
                 </Button>
               </div>
