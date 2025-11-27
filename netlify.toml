@@ -4,3 +4,33 @@
 
 [build.environment]
   NODE_VERSION = "20"
+
+# Forçar HTTPS em todas as requisições
+[[redirects]]
+  from = "http://cantinhodaluci.com.br/*"
+  to = "https://cantinhodaluci.com.br/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.cantinhodaluci.com.br/*"
+  to = "https://www.cantinhodaluci.com.br/:splat"
+  status = 301
+  force = true
+
+# Configuração para SPA - todas as rotas apontam para index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Headers de segurança
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"

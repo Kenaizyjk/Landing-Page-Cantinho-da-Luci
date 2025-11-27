@@ -1,0 +1,6 @@
+# Forçar HTTPS
+http://cantinhodaluci.com.br/* https://cantinhodaluci.com.br/:splat 301!
+http://www.cantinhodaluci.com.br/* https://www.cantinhodaluci.com.br/:splat 301!
+
+# SPA routing - todas as rotas apontam para index.html (deve ser a última regra)
+/*    /index.html   200
