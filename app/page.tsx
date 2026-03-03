@@ -66,7 +66,7 @@ export default function LandingPage() {
 
         <div className="relative z-10 text-center text-white px-5 sm:px-8 max-w-4xl mx-auto w-full">
           <p className="uppercase tracking-[0.25em] text-[#D4AF37] font-semibold text-xs sm:text-sm mb-3 sm:mb-4">
-            Restaurante &amp; Pousada · Lapinha da Serra
+            Restaurante &amp; Pousada · Lapinha
           </p>
           <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-bold mb-4 sm:mb-5 tracking-tight drop-shadow-2xl leading-tight">
             Cantinho da Luci
@@ -186,52 +186,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ─── SOBRE A LUCI ─── */}
-      <section className="py-16 sm:py-20 md:py-24 bg-[#1a1208] w-full overflow-hidden">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-          <div className="grid md:grid-cols-2 gap-8 sm:gap-10 md:gap-16 items-center">
-            <div className="relative aspect-[3/4] sm:aspect-[4/3] md:aspect-[3/4] max-w-sm mx-auto md:max-w-none rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src="/luci-portrait-kitchen.jpg"
-                alt="Luci na cozinha"
-                fill
-                className="object-cover object-top"
-                sizes="(max-width: 768px) 85vw, 50vw"
-                quality={85}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1a1208]/50 to-transparent" />
-            </div>
-            <div className="space-y-5 sm:space-y-6 text-stone-100">
-              <span className="uppercase tracking-widest text-xs sm:text-sm font-bold text-[#D4AF37]">
-                A Anfitriã
-              </span>
-              <h2 className="text-3xl xs:text-4xl sm:text-5xl font-serif font-bold text-white leading-tight">
-                Feito com amor,
-                <br />
-                do jeito mineiro
-              </h2>
-              <div className="w-16 h-[3px] bg-[#D4AF37] rounded-full" />
-              <p className="text-stone-300 text-sm sm:text-base md:text-lg leading-relaxed">
-                Luci cuida de cada detalhe com a dedicação de quem cozinha para a própria família. Cada prato é uma
-                memória afetiva — temperado com carinho e preparado com ingredientes escolhidos a dedo, direto do campo.
-              </p>
-              <p className="text-stone-400 text-sm sm:text-base leading-relaxed">
-                Há mais de 20 anos recebendo visitantes em Lapinha da Serra, o Cantinho da Luci se tornou uma referência
-                de hospitalidade mineira genuína.
-              </p>
-              <div className="flex items-center gap-3 pt-1">
-                <div className="flex gap-0.5">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-[#D4AF37] text-[#D4AF37]" />
-                  ))}
-                </div>
-                <span className="text-stone-400 text-sm">+200 avaliações 5 estrelas</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ─── ACOMODAÇÕES ─── */}
       <section id="hospedagem" className="py-20 sm:py-24 md:py-32 bg-stone-50 w-full">
         <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
@@ -249,52 +203,6 @@ export default function LandingPage() {
           </div>
 
           <div className="space-y-16 sm:space-y-20 md:space-y-28">
-            {/* Piscina */}
-            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-              <div className="grid grid-cols-2 gap-3 sm:gap-4">
-                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
-                  <Image
-                    src="/pool-luxury-nature.jpg"
-                    alt="Piscina ao ar livre rodeada de natureza"
-                    fill
-                    className="object-cover"
-                    quality={85}
-                    sizes="(max-width: 1024px) 50vw, 25vw"
-                  />
-                </div>
-                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl mt-6 sm:mt-10">
-                  <Image
-                    src="/hammock-balcony-nature.jpg"
-                    alt="Varanda com rede e natureza"
-                    fill
-                    className="object-cover"
-                    quality={85}
-                    sizes="(max-width: 1024px) 50vw, 25vw"
-                  />
-                </div>
-              </div>
-              <div className="space-y-4 sm:space-y-5">
-                <h3 className="text-2xl xs:text-3xl sm:text-4xl font-serif font-bold text-stone-900">
-                  Piscina e Natureza
-                </h3>
-                <p className="text-stone-600 text-sm sm:text-base md:text-lg leading-relaxed">
-                  Relaxe em nossa piscina cercada pelo verde e pelo canto dos pássaros. O ambiente perfeito para se
-                  refrescar nos dias de sol, ler um livro à sombra das árvores ou simplesmente não fazer nada.
-                </p>
-                <div className="flex flex-wrap gap-2 sm:gap-3 pt-1">
-                  {["Área Verde", "Espreguiçadeiras", "Varanda com Rede", "Trilhas Próximas"].map((item) => (
-                    <span
-                      key={item}
-                      className="flex items-center gap-1.5 text-stone-700 bg-stone-100 border border-stone-200 rounded-lg px-3 py-2 text-xs sm:text-sm font-medium"
-                    >
-                      <Star className="w-3 h-3 text-[#D4AF37] fill-current flex-shrink-0" />
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-
             {/* Quartos */}
             <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
               <div className="lg:order-1 space-y-4 sm:space-y-5">
