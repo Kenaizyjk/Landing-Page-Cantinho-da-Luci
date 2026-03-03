@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@theme {
+  --breakpoint-xs: 30rem;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -163,7 +167,8 @@
     -webkit-tap-highlight-color: transparent;
   }
   html {
-    @apply overflow-x-hidden;
+    @apply overflow-x-hidden scroll-smooth;
+    scroll-padding-top: 4rem;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
   }
