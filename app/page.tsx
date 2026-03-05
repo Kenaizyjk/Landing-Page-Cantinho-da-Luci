@@ -2,29 +2,10 @@ import Image from "next/image"
 import { MapPin, Phone, Instagram, Clock, Wifi, Coffee, MessageCircle, Star } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 
-const foodItems = [
-  {
-    src: "/feijao-tropeiro-mineiro-food.jpg",
-    alt: "Feijão Tropeiro Mineiro",
-    label: "Feijão Tropeiro",
-  },
-  {
-    src: "/frango-com-quiabo-mineiro.jpg",
-    alt: "Frango com Quiabo",
-    label: "Frango com Quiabo",
-  },
-  {
-    src: "/cafe-da-manha-mineiro-pao-de-queijo.jpg",
-    alt: "Café da Manhã com Pão de Queijo",
-    label: "Café da Manhã",
-  },
-]
-
 const roomImages = [
   { src: "/quarto-casal.jpeg", alt: "Quarto de Casal" },
   { src: "/quarto-familia.jpeg", alt: "Quarto Família" },
   { src: "/banheiro.jpeg", alt: "Banheiro" },
-  { src: "/cozy-bedroom-rustic.jpg", alt: "Ambiente rústico e aconchegante" },
 ]
 
 const testimonials = [
@@ -164,25 +145,6 @@ export default function LandingPage() {
             </div>
           </div>
 
-          {/* Food gallery strip */}
-          <div className="grid grid-cols-3 gap-2 sm:gap-4">
-            {foodItems.map((item) => (
-              <div key={item.src} className="group relative aspect-square sm:aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 640px) 33vw, (max-width: 1024px) 33vw, 400px"
-                  quality={80}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                <span className="absolute bottom-2 sm:bottom-3 left-2 sm:left-3 right-2 text-white font-semibold text-xs sm:text-sm leading-tight drop-shadow-md">
-                  {item.label}
-                </span>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -238,13 +200,11 @@ export default function LandingPage() {
                   </a>
                 </div>
               </div>
-              <div className="lg:order-2 grid grid-cols-2 gap-3 sm:gap-4">
-                {roomImages.map((img, i) => (
+              <div className="lg:order-2 grid grid-cols-3 gap-3 sm:gap-4">
+                {roomImages.map((img) => (
                   <div
                     key={img.src}
-                    className={`relative aspect-square rounded-xl overflow-hidden shadow-lg ${
-                      i % 2 === 1 ? "sm:mt-8" : ""
-                    }`}
+                    className="relative aspect-square rounded-xl overflow-hidden shadow-lg"
                   >
                     <Image
                       src={img.src}
